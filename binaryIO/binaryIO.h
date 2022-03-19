@@ -1,6 +1,6 @@
 /*
  * This file is part of the Cpp utils distribution (https://github.com/feodorp/Cpp)
- * Copyright (C) Feodor Pisnitchenko
+ * Copyright (C) 2022 Feodor Pisnitchenko
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
