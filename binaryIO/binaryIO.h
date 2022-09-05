@@ -199,7 +199,7 @@ namespace binIO {
             inline void write(const std::byte* buffer, std::streamsize size) const { write(reinterpret_cast<const char*>(buffer), size); }
             // Write element of arithmetic type:
             template<std::endian en = std::endian::native, class T, std::enable_if_t<std::is_arithmetic_v<T>, bool> = true>
-            inline void read(const T &x) const
+            inline void write(const T &x) const
             {
                 if constexpr (en != std::endian::native) {
                     T y = reverseBytes(x);
@@ -234,7 +234,7 @@ namespace binIO {
             }
             // Write elements to std::array<T,N>
             template<std::endian en = std::endian::native, class T, std::size_t N>
-            inline void read(const std::array<T,N> &x) const
+            inline void write(const std::array<T,N> &x) const
             {
                 write<en>(reinterpret_cast<const T(&)[N]>(*x.data()));
             }
